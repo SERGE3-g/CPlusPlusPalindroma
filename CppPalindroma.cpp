@@ -9,6 +9,7 @@ using namespace std;
 
 // Creo una funziona che controlla se una parola è palindroma
 bool isPalindroma(string Buongiorno){
+    bool palindroma = true;
     int k = Buongiorno.length()-1;
     for(int i = 0, _i = Buongiorno.length()-1; i< Buongiorno.length() / 2; i++){
         if(Buongiorno[i] != Buongiorno[_i--])
@@ -21,14 +22,12 @@ bool isPalindroma(string Buongiorno){
 int main(){
     string parola="Buongiorno";
      int a = 10;
-    if(isPalindroma(parola)){
-        cout << "La parola e' palindroma";
-    }else{
-        cout << "La parola non e' palindroma";
-        cout << parola;
-        return 0;
-    }
+    if(isPalindroma(parola))
+        cout << "La parola " << parola << " e' palindroma" << endl;
+    else
+        cout << "La parola " << parola << " non e' palindroma" << endl;
     return 0;
+
 
 }
 
