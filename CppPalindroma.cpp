@@ -12,8 +12,10 @@ bool isPalindroma(string Buongiorno){
     bool palindroma = true;
     int k = Buongiorno.length()-1;
     for(int i = 0, _i = Buongiorno.length()-1; i< Buongiorno.length() / 2; i++){
-        if(Buongiorno[i] != Buongiorno[_i--])
-            return false;
+        if(Buongiorno[i] != Buongiorno[_i--]){
+            palindroma = false;
+            break;
+        }
     }
     return true;
 }
@@ -22,11 +24,13 @@ bool isPalindroma(string Buongiorno){
 int main(){
     string parola="Buongiorno";
      int a = 10;
-    if(isPalindroma(parola))
-        cout << "La parola " << parola << " e' palindroma" << endl;
-    else
-        cout << "La parola " << parola << " non e' palindroma" << endl;
-    return 0;
+     cout << isPalindroma(parola) << endl;
+    if(isPalindroma(parola)){
+        cout << "La parola e' palindroma" << endl;
+    }else{
+        cout << "La parola non e' palindroma" << endl;
+        return 0;
+    }
 
 
 }
